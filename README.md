@@ -1,3 +1,6 @@
+NOTE: The application codebase was sourced from an existing public GitHub repository.  
+      This project focuses on containerization, Docker configuration, networking, and deployment setup.
+
 # Inventory Management System MERN CRUD App
 
 A simple MERN project that lets the user insert, update, delete & get products from the MongoDB.
@@ -86,12 +89,12 @@ Run container:
 
 MongoDB
 
-  docker run -d \
-  --name mongodb \
-  --network network-name \
-  -p 27017:27017 \
-  -v mongo_data:/data/db \
-  mongo
+      docker run -d \
+      --name mongodb \
+      --network network-name \
+      -p 27017:27017 \
+      -v mongo_data:/data/db \
+      mongo
 
 🌐 Networking
 
