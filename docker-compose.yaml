@@ -1,0 +1,34 @@
+services:
+      frontend:
+        build: ./Frontend/inventory_management_system 
+        ports:
+          - "3000:80"
+        networks:
+          -  demo
+      backend:
+        build: ./backend
+        ports:
+         - "3001:3001"
+        networks:
+         - demo
+        depends_on:
+         - mongodb
+      
+      mongodb:
+       image: mongo:latest
+       ports:
+        - "27017:27017"
+       networks:
+        - demo
+       volumes:
+         - mongo-data:/data/db
+
+networks:
+  demo:
+    driver: bridge
+
+volumes:
+  mongo-data:
+    driver: local
+
+          
