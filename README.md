@@ -71,6 +71,7 @@ Build image:
     docker build -t frontend .
 
 Run container:
+
     docker run -p 3000:3000 frontend
 
 ### Backend
@@ -84,7 +85,8 @@ Run container:
       docker run -p 3001:3001 backend
 
 MongoDB
-docker run -d \
+
+  docker run -d \
   --name mongodb \
   --network network-name \
   -p 27017:27017 \
